@@ -1,4 +1,4 @@
-console.log('ola')
+console.log('Hello')
 
 
-console.error('deu erro!')
+console.error('Someting Wrong!')
