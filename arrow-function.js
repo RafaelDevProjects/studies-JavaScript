@@ -18,4 +18,3 @@ const sumSmallNumbers = (n1,n2) => {
     }
 }
 
-
