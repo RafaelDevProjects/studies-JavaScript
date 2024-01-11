@@ -5,6 +5,8 @@ const client = {
     email: "rarara@gmail.com"
 };
 
-console.log(`The name of the client is ${client.name} and he have ${client.years} years old.`);
+console.log(`The name of the client is ${client["name"]} and he have ${client["years"]} years old.`); // using brackets
 
-console.log(`The 3 first digits of CPF are ${client.cpf.substring(0, 3)}`);
+const keys = ["name", "years", "cpf", "email", 'height'];
+
+keys.forEach( (chave) => console.log(`The key is ${chave} have the value ${client[chave]}`))
