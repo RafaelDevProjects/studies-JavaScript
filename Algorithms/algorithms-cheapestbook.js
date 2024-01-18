@@ -1,13 +1,14 @@
 const books = require('./list-books')
 
-const priceBooks =[25, 15, 30, 50, 45, 20]
+function menorValor(arrProducts, startPosicion) {
+    let moreCheap = startPosicion;
 
-let moreCheap = 0;
-
-for (let actual = 0; actual < books.length; actual++){
-    if (books[actual].price < books[moreCheap].price){
-        moreCheap = actual
+    for (let actual = 0; actual < arrProducts.length; actual++){
+        if (arrProducts[actual].price < arrProducts[moreCheap].price){
+            moreCheap = actual
+        }   
     }
+    return moreCheap
 }
 
-console.log(books[moreCheap].title + ':' + books[moreCheap].price)
+module.exports = menorValor;
