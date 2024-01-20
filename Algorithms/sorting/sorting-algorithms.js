@@ -1,4 +1,4 @@
-const books = require ('./list-books');
+const books = require ('../list-books');
 const menorValor = require('./menorValor');
 
 for (let actual = 0 ;actual < books.length - 1; actual++){

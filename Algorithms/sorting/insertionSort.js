@@ -1,4 +1,4 @@
-const books = require ('./list-books')
+const books = require ('../list-books')
 
 function insertionSort(list) {
     for (let actual = 0; actual < list.length; actual++){
