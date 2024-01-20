@@ -8,7 +8,7 @@ function insertionSort(list) {
             let beforeItem = list[analise-1];
 
             list[analise] = beforeItem
-            list[analise - 1] = itemAnalise
+            list[analise - 1] = itemAnalise 
  
             analise--
         }
