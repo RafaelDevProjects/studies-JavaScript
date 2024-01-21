@@ -1,42 +1,42 @@
-const listBooks = require('./array')
+const listaLivros = require('./array');
+const trocaLugar = require('./quickSort-functions');
 
-function findSmaller(pivo, array){
-    let smallers = 0;
+function quickSort(array, esquerda, direita) {
+  if (array.length > 1) {
+    let indiceAtual = particiona(array, esquerda, direita);
+    if (esquerda < indiceAtual - 1) {
+      quickSort(array, esquerda, indiceAtual - 1);
+    }
+    if (indiceAtual < direita) {
+      quickSort(array, indiceAtual, direita)
+    }
+  }
+  return array;
+}
 
-    for (let actual= 0; actual < array.length; actual++){
-        let actualObcject = array[actual]
-        if (actualObcject.price < pivo.price){
-            smallers++
-        }
+function particiona(array, esquerda, direita) {
+  console.log('array', array)
+  console.log('esquerda, direita', esquerda, direita)
+  let pivo = array[Math.floor((esquerda + direita) / 2)]
+  let atualEsquerda = esquerda; //0
+  let atualDireita = direita; //10
+
+  while (atualEsquerda <= atualDireita) {
+    while (array[atualEsquerda].preco < pivo.preco) {
+      atualEsquerda++
     }
 
-    changePlace(array, array.indexOf(pivo), smallers)
-    return array
-}
-
-function changePlace(array, from, to){
-    const elem1 = array[from]
-    const elem2 = array[to]
-    array[to] = elem1
-    array[from] = elem2
-}
-
-function sliceInPivo(array){
-    let pivo = array[Math.floor(array.length / 2)];
-    findSmaller(pivo, array);
-    let valueSmallers = 0;
-
-    for(let analising = 0; analising < array.length; analising++){
-        let actual = array[analising];
-        if (actual.price <= pivo.price && actual !== pivo){
-            changePlace(array, analising, valueSmallers)
-            valueSmallers++;
-        }
+    while (array[atualDireita].preco > pivo.preco) {
+      atualDireita--
     }
 
-    return array;
+    if (atualEsquerda <= atualDireita) {
+      trocaLugar(array, atualEsquerda, atualDireita);
+      atualEsquerda++;
+      atualDireita--;
+    }
+  }
+  return atualEsquerda;
 }
 
-//console.log(findSmaller(listBooks[2], listBooks));
-
-console.log(sliceInPivo(listBooks));
+console.log(quickSort(listaLivros, 0, listaLivros.length - 1))
