@@ -1,5 +1,6 @@
 const books = require ('../../list-books');
 const menorValor = require('./menorValor');
+// complexcity: n^2 
 
 for (let actual = 0 ;actual < books.length - 1; actual++){
     let index = menorValor(books, actual);

@@ -1,5 +1,5 @@
 const books = require ('../../list-books')
-
+// complexcity: n^2 
 function insertionSort(list) {
     for (let actual = 0; actual < list.length; actual++){
         let analise = actual;

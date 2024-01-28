@@ -1,5 +1,7 @@
 const listaLivros = require('./array');
 const trocaLugar = require('./quickSort-functions');
+// complexity: n * (log n)
+
 
 function quickSort(array, esquerda, direita) {
   if (array.length > 1) {

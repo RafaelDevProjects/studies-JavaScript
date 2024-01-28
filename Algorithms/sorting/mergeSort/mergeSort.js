@@ -1,5 +1,5 @@
 const listBooks = require('./array')
-
+// Complexity: n * (log n)  (more quickly then merge sort)
 
 function mergeSort(array){
 

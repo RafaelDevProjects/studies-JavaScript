@@ -1,0 +1,25 @@
+const listBooks = require('./sortedArray')
+// complexity: O(logN)
+// only why sorted array
+function search(array, from, to, searchValue){
+    const middle = Math.floor((from + to) / 2);
+    const middleObject = array[middle]
+
+    if (from > to){
+        return -1;
+    }
+
+    if (searchValue === middleObject.price){
+        return middle
+    }
+
+    if (searchValue < middleObject.price){
+        return search(array, from, middle - 1, searchValue)
+    }
+
+    if (searchValue > middleObject.price){
+        return search(array, middle + 1, to, searchValue);
+    }
+}
+
+console.log(search(listBooks, 0, listBooks.length - 1, 40))
