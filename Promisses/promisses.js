@@ -16,4 +16,4 @@ function takeFile(filePath){
         .finally((message) => console.log('finished')) //when the run is finally finished
 }
 
-takeFile('../readme.md')
+takeFile('../Libraries/readme.md')
