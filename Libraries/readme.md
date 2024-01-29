@@ -15,3 +15,5 @@ Some more complex libs and frameworks will require installation to be done globa
 
 Chalk is a JavaScript library designed to enhance text output in the console by adding color and style. Particularly useful for command-line interfaces (CLIs) and Node.js scripts, Chalk provides a range of formatting options to improve readability and user experience.
 [CHALK](https://www.npmjs.com/package/chalk)
+
+### fs Library in JavaScript
