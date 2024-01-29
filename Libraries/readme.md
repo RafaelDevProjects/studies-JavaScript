@@ -11,7 +11,6 @@ Most of the time, you will use the local option, with the commands 'npm install 
 Some more complex libs and frameworks will require installation to be done globally to work. It is always worth consulting the documentation for each one. To perform a global package installation, we use the 'npm install -g <package name>' or 'yarn add global <package name>' commands.
 
 
-### Chalk Library in JavaScript
+### *Chalk* Library in JavaScript
 
 Chalk is a JavaScript library designed to enhance text output in the console by adding color and style. Particularly useful for command-line interfaces (CLIs) and Node.js scripts, Chalk provides a range of formatting options to improve readability and user experience.
-[CHALK](https://www.npmjs.com/package/chalk)
