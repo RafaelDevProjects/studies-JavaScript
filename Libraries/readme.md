@@ -16,4 +16,7 @@ Some more complex libs and frameworks will require installation to be done globa
 Chalk is a JavaScript library designed to enhance text output in the console by adding color and style. Particularly useful for command-line interfaces (CLIs) and Node.js scripts, Chalk provides a range of formatting options to improve readability and user experience.
 [CHALK](https://www.npmjs.com/package/chalk)
 
-### fs Library in JavaScript
+### *fs* Library in JavaScript
+
+The fs (File System) library in JavaScript is a core module that provides functionality to interact with the file system. It is particularly useful for reading, writing, and manipulating files in a Node.js environment.
+[FS](https://nodejs.org/api/fs.html) 
