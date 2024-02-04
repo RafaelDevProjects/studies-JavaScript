@@ -1,9 +1,9 @@
 import fs from 'fs'
-import chalk from 'chalk';
 import { error } from 'console';
+import { deflate } from 'zlib';
 
 function treatsError(error){
-    throw new Error(chalk.red(error.code, 'not file in directory')); // will be launched in the terminal
+    throw new Error((error.code, 'not file in directory')); // will be launched in the terminal
 
 };
 function extractLinks(text){
@@ -18,11 +18,11 @@ async function takeFile(filePath) {
     try{
         const encoding = 'utf-8';
         const text = await fs.promises.readFile(filePath, encoding) 
-        console.log(extractLinks(text));
+        return extractLinks(text);
     } catch (error){
         treatsError(error)
     }
 }
 
-takeFile('../readme.md')
+export default takeFile;
 
